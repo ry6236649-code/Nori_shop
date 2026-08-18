@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nori Shop | المتجر الأول لخدمات السوشيال ميديا</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #070a12;
+            --card-bg: #111827;
+            --accent-cyan: #00f2fe;
+            --accent-blue: #4facfe;
+            --text-color: #f9fafb;
+            --text-dim: #9ca3af;
+            --whatsapp-green: #25d366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; scroll-behavior: smooth; }
+        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; overflow-x: hidden; }
+
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 15px 8%; background: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .logo {
+            font-size: 28px; font-weight: 900;
+            background: linear-gradient(45deg, var(--accent-cyan), var(--accent-blue));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+
+        .hero {
+            text-align: center; padding: 80px 20px 50px;
+            background: radial-gradient(circle at top, rgba(0, 242, 254, 0.15), transparent 70%);
+        }
+
+        .hero h1 { font-size: 2.8rem; margin-bottom: 15px; font-weight: 900; }
+        .hero span { color: var(--accent-cyan); }
+        .hero p { color: var(--text-dim); font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px 80px; }
+        .section-title { text-align: center; font-size: 2rem; margin-bottom: 40px; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        
+        .card {
+            background: var(--card-bg); border-radius: 20px; padding: 30px 20px; text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px); border-color: var(--accent-cyan);
+            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.2);
+        }
+
+        .card i { font-size: 50px; margin-bottom: 15px; }
+        .price { font-size: 2rem; font-weight: 800; color: var(--accent-cyan); margin: 15px 0; }
+
+        .btn-order {
+            display: block; width: 100%; padding: 12px;
+            background: linear-gradient(45deg, var(--accent-blue), var(--accent-cyan));
+            color: #000; font-weight: 800; text-decoration: none; border-radius: 10px;
+            transition: opacity 0.3s;
+        }
+
+        .order-section {
+            background: var(--card-bg); border-radius: 20px; padding: 40px;
+            max-width: 600px; margin: 50px auto 0; border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .form-group { margin-bottom: 20px; text-align: right; }
+        .form-group label { display: block; margin-bottom: 8px; color: var(--text-dim); }
+        .form-group input, .form-group select {
+            width: 100%; padding: 14px; background: var(--bg-color);
+            border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; color: #fff; outline: none;
+        }
+
+        .btn-submit {
+            width: 100%; padding: 15px; background: var(--whatsapp-green); color: #fff;
+            font-weight: 800; border: none; border-radius: 10px; font-size: 1.1rem; cursor: pointer;
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+        }
+
+        .floating-wa {
+            position: fixed; bottom: 25px; left: 25px; background: var(--whatsapp-green);
+            color: white; width: 60px; height: 60px; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center; font-size: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5); z-index: 999; text-decoration: none;
+        }
+
+        footer { text-align: center; padding: 30px; border-top: 1px solid rgba(255, 255, 255, 0.08); color: var(--text-dim); }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/212634428448" class="floating-wa" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+
+    <header>
+        <div class="logo">NORI SHOP</div>
+        <div style="color: var(--accent-cyan); font-weight: 700;"><i class="fa-solid fa-shield-halved"></i> موثوق 100%</div>
+    </header>
+
+    <section class="hero">
+        <h1>انطلق بحسابك لمستوى آخر مع <span>NORI SHOP</span></h1>
+        <p>أسرع وأضمن منصة لتزويد المتابعين والتفاعلات لجميع المنصات بأعلى جودة.</p>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">اختر باقتك المفضلة 🔥</h2>
+        <div class="services-grid">
+            <div class="card">
+                <i class="fa-brands fa-instagram" style="color: #e1306c;"></i>
+                <h3>انستغرام</h3>
+                <div class="price">10,000 متابع</div>
+                <a href="#order" class="btn-order" onclick="setService('انستغرام - 10k')">اطلب الآن</a>
+            </div>
+            <div class="card">
+                <i class="fa-brands fa-tiktok" style="color: #00f2fe;"></i>
+                <h3>تيك توك</h3>
+                <div class="price">5,000 متابع</div>
+                <a href="#order" class="btn-order" onclick="setService('تيك توك - 5k')">اطلب الآن</a>
+            </div>
+            <div class="card">
+                <i class="fa-brands fa-facebook" style="color: #1877f2;"></i>
+                <h3>فيسبوك</h3>
+                <div class="price">10,000 متابع</div>
+                <a href="#order" class="btn-order" onclick="setService('فيسبوك - 10k')">اطلب الآن</a>
+            </div>
+        </div>
+
+        <div class="order-section" id="order">
+            <h3 style="text-align: center; margin-bottom: 25px;">تأكيد الطلب المباشر 📱</h3>
+            <form id="waForm">
+                <div class="form-group">
+                    <label>الخدمة المختارة:</label>
+                    <select id="serviceSelect">
+                        <option value="انستغرام - 10k">انستغرام - 10k متابع</option>
+                        <option value="تيك توك - 5k">تيك توك - 5k متابع</option>
+                        <option value="فيسبوك - 10k">فيسبوك - 10k متابع</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>اسم الحساب / رابط الحساب:</label>
+                    <input type="text" id="accInput" placeholder="@username" required>
+                </div>
+                <button type="submit" class="btn-submit">
+                    <i class="fa-brands fa-whatsapp"></i> إرسال الطلب عبر WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © NORI SHOP 2026</p>
+    </footer>
+
+    <script>
+        const myNum = "212634428448";
+        function setService(val){ document.getElementById('serviceSelect').value = val; }
+        document.getElementById('waForm').addEventListener('submit', function(e){
+            e.preventDefault();
+            const s = document.getElementById('serviceSelect').value;
+            const a = document.getElementById('accInput').value;
+            window.open(`https://wa.me/${myNum}?text=طلب_جديد_من_NORI_SHOP%0Aالخدمة:%20${s}%0Aالحساب:%20${a}`, '_blank');
+        });
+    </script>
+
+</body>
+</html>
