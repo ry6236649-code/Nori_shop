@@ -15,6 +15,7 @@
             --text-color: #f9fafb;
             --text-dim: #9ca3af;
             --whatsapp-green: #25d366;
+            --discount-red: #ff4757;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; scroll-behavior: smooth; }
@@ -51,6 +52,7 @@
         .card {
             background: var(--card-bg); border-radius: 20px; padding: 30px 20px; text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.4s ease;
+            position: relative; overflow: hidden;
         }
 
         .card:hover {
@@ -58,8 +60,17 @@
             box-shadow: 0 10px 30px rgba(0, 242, 254, 0.2);
         }
 
+        .badge {
+            position: absolute; top: 15px; right: -35px;
+            background: var(--discount-red); color: #fff;
+            padding: 5px 35px; font-size: 0.8rem; font-weight: 800;
+            transform: rotate(45deg); box-shadow: 0 2px 10px rgba(255, 71, 87, 0.4);
+        }
+
         .card i { font-size: 50px; margin-bottom: 15px; }
-        .price { font-size: 2rem; font-weight: 800; color: var(--accent-cyan); margin: 15px 0; }
+        .amount { font-size: 1.8rem; font-weight: 800; color: #fff; margin: 10px 0 5px; }
+        .price { font-size: 1.5rem; font-weight: 700; color: var(--accent-cyan); margin-bottom: 15px; }
+        .old-price { text-decoration: line-through; color: var(--text-dim); font-size: 1.1rem; margin-left: 8px; }
 
         .btn-order {
             display: block; width: 100%; padding: 12px;
@@ -113,24 +124,35 @@
     <div class="container">
         <h2 class="section-title">اختر باقتك المفضلة 🔥</h2>
         <div class="services-grid">
+            
+            <!-- باقة 500 متابع -->
             <div class="card">
                 <i class="fa-brands fa-instagram" style="color: #e1306c;"></i>
                 <h3>انستغرام</h3>
-                <div class="price">10,000 متابع</div>
-                <a href="#order" class="btn-order" onclick="setService('انستغرام - 10k')">اطلب الآن</a>
+                <div class="amount">500 متابع</div>
+                <div class="price">10 DH</div>
+                <a href="#order" class="btn-order" onclick="setService('انستغرام - 500 متابع (10DH)')">اطلب الآن</a>
             </div>
+
+            <!-- باقة 1000 متابع -->
             <div class="card">
-                <i class="fa-brands fa-tiktok" style="color: #00f2fe;"></i>
-                <h3>تيك توك</h3>
-                <div class="price">5,000 متابع</div>
-                <a href="#order" class="btn-order" onclick="setService('تيك توك - 5k')">اطلب الآن</a>
+                <i class="fa-brands fa-instagram" style="color: #e1306c;"></i>
+                <h3>انستغرام</h3>
+                <div class="amount">1,000 متابع</div>
+                <div class="price">20 DH</div>
+                <a href="#order" class="btn-order" onclick="setService('انستغرام - 1000 متابع (20DH)')">اطلب الآن</a>
             </div>
+
+            <!-- باقة 5000 متابع مع شعار التخفيض -->
             <div class="card">
-                <i class="fa-brands fa-facebook" style="color: #1877f2;"></i>
-                <h3>فيسبوك</h3>
-                <div class="price">10,000 متابع</div>
-                <a href="#order" class="btn-order" onclick="setService('فيسبوك - 10k')">اطلب الآن</a>
+                <div class="badge">خصم 10DH 🔥</div>
+                <i class="fa-brands fa-instagram" style="color: #e1306c;"></i>
+                <h3>انستغرام (عرض خاص)</h3>
+                <div class="amount">5,000 متابع</div>
+                <div class="price"><span class="old-price">70 DH</span> 60 DH</div>
+                <a href="#order" class="btn-order" onclick="setService('انستغرام - 5000 متابع (60DH - عرض خاص)')">اطلب الآن</a>
             </div>
+
         </div>
 
         <div class="order-section" id="order">
@@ -139,9 +161,9 @@
                 <div class="form-group">
                     <label>الخدمة المختارة:</label>
                     <select id="serviceSelect">
-                        <option value="انستغرام - 10k">انستغرام - 10k متابع</option>
-                        <option value="تيك توك - 5k">تيك توك - 5k متابع</option>
-                        <option value="فيسبوك - 10k">فيسبوك - 10k متابع</option>
+                        <option value="انستغرام - 500 متابع (10DH)">انستغرام - 500 متابع (10 DH)</option>
+                        <option value="انستغرام - 1000 متابع (20DH)">انستغرام - 1000 متابع (20 DH)</option>
+                        <option value="انستغرام - 5000 متابع (60DH - عرض خاص)">انستغرام - 5000 متابع (60 DH - عرض خاص 🔥)</option>
                     </select>
                 </div>
                 <div class="form-group">
